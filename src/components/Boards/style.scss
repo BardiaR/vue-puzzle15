@@ -1,0 +1,37 @@
+@import "./../../assets/scss/mixin/mixin.scss";
+
+.board-wrapper {
+  position: relative;
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    .logo {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-right: 20px;
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .text {
+        font-weight: 600;
+        font-family: "Tahoma";
+        font-size: 20px;
+    }
+  }
+  .board {
+    display: grid;
+    grid-template-columns: repeat(4, 160px);
+    grid-template-rows: repeat(4, 160px);
+    position: relative;
+    overflow: hidden;
+  }
+}

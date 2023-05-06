@@ -1,0 +1,109 @@
+@import "./../../assets/scss/mixin/mixin.scss";
+
+.tile {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dddddd;
+  position: absolute;
+  font-size: 50px;
+  font-weight: 500;
+  font-family: "Tahoma";
+  color: #323232;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+  z-index: 1;
+  overflow: hidden;
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    background-color: rgb(59, 122, 59);
+    border-radius: 100px;
+    transition: 0.5s;
+    z-index: -1;
+  }
+  &.disabled {
+    pointer-events: none;
+    background-color: transparent !important;
+    &::before {
+      background-color: transparent;
+    }
+  }
+  &.slot--0 {
+    left: 0;
+    top: 0;
+  }
+  &.slot--1 {
+    left: calc(160px);
+    top: 0;
+  }
+  &.slot--2 {
+    left: calc(2 * 160px);
+    top: 0;
+  }
+  &.slot--3 {
+    left: calc(3 * 160px);
+    top: 0;
+  }
+  &.slot--4 {
+    left: 0;
+    top: calc(160px);
+  }
+  &.slot--5 {
+    left: calc(160px);
+    top: calc(160px);
+  }
+  &.slot--6 {
+    top: calc(160px);
+    left: calc(2 * 160px);
+  }
+  &.slot--7 {
+    left: calc(3 * 160px);
+    top: calc(160px);
+  }
+  &.slot--8 {
+    left: 0;
+    top: calc(2 * 160px);
+  }
+  &.slot--9 {
+    left: calc(160px);
+    top: calc(2 * 160px);
+  }
+  &.slot--10 {
+    left: calc(2 * 160px);
+    top: calc(2 * 160px);
+  }
+  &.slot--11 {
+    left: calc(3 * 160px);
+    top: calc(2 * 160px);
+  }
+  &.slot--12 {
+    left: 0;
+    top: calc(3 * 160px);
+  }
+  &.slot--13 {
+    left: calc(160px);
+    top: calc(3 * 160px);
+  }
+  &.slot--14 {
+    left: calc(2 * 160px);
+    top: calc(3 * 160px);
+  }
+  &.slot--15 {
+    left: calc(3 * 160px);
+    top: calc(3 * 160px);
+  }
+  &.currect {
+    color: #fff;
+    &::before {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+    }
+  }
+}
